@@ -1,8 +1,9 @@
 const axios = require('axios')
 const cheerio = require('cheerio')
 const fs = require('fs')
+const args = require('node-args')
 
-const url = 'http://ename.dict.cn/list/all/P/2'
+const url = 'http://ename.dict.cn/list/all/N/3'
 
 async function init() {
     const res = await axios.get(url)
@@ -21,7 +22,9 @@ async function init() {
         tr.children.filter(td => td.type === 'tag').forEach((td, idx) => {
             switch (idx) {
                 case 0:
-                    cols.push(cheerio.load(td.children[0]).text())
+                    if(args.a == 0){
+                        cols.push(cheerio.load(td.children[0]).text())
+                    }
                     break
                 case 1:
                     const sexMap = {
@@ -29,10 +32,14 @@ async function init() {
                         'female': '女',
                         'neutral': '男/女'
                     }
-                    cols.push(sexMap[td.children[0].attribs.class])
+                    if (args.a == 1) {
+                        cols.push(sexMap[td.children[0].attribs.class])
+                    }
                     break
                 case 2:
-                    cols.push(cheerio.load(td.children[0]).text())
+                    if(args.a == 2){
+                        cols.push(cheerio.load(td.children[0]).text())
+                    }
                     break
             }
         })

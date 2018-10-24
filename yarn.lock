@@ -123,6 +123,10 @@ ms@2.0.0:
   version "2.0.0"
   resolved "http://registry.npm.taobao.org/ms/download/ms-2.0.0.tgz#5608aeadfc00be6c2901df5f9861788de0d597c8"
 
+node-args@^2.1.8:
+  version "2.1.8"
+  resolved "http://registry.npm.taobao.org/node-args/download/node-args-2.1.8.tgz#d3d0d07cf8df56492638c56fdfed204eb434425c"
+
 nth-check@~1.0.1:
   version "1.0.2"
   resolved "http://registry.npm.taobao.org/nth-check/download/nth-check-1.0.2.tgz#b2bd295c37e3dd58a3bf0700376663ba4d9cf05c"
