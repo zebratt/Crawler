@@ -1,0 +1,8 @@
+{
+  "name": "Crawler",
+  "version": "1.0.0",
+  "description": "The crawler",
+  "main": "index.js",
+  "author": "xuejian.xu",
+  "license": "MIT"
+}
