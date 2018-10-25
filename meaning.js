@@ -15,7 +15,7 @@ async function init() {
     const content = []
 
     for (let i = 0; i < names.length; i++) {
-        sleep(300)
+        await sleep(200)
 
         const res = await axios.get(url + names[i])
         const $ = cheerio.load(res.data)
